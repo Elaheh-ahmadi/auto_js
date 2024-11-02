@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --car-w: 200px;
+    --car-h: 100px;
+    --street-padding: 1rem;
+    --center-line: 1.2rem;
+}
+
+.street {
+    display: block;
+    width: 100%;
+    background-color: lightgray;
+    padding: var(--street-padding);
+}
+
+.street-top {
+    border-bottom: var(--center-line) dashed white;
+}
+.street-bottom {
+    height: calc(var(--street-padding) * 2 + var(--car-h) + var(--street-padding) );
+    border-bottom: var(--center-line) solid white;
+}
+
+#car {
+    background-image: url("./car.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    width: var(--car-w);
+    height: var(--car-h);
+    left: 10px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    background-color: lightblue;
+    gap: 5px;
+}
+
+.btn-container button {
+    padding: 1em 2em;
+    font-size: 2rem;
+    background-color: white;
+    border: 2px solid lightblue;
+}
+.btn-container button:hover {
+    filter: brightness(90%);
+}
+.btn-container button:active {
+    filter: brightness(95%);
+}
